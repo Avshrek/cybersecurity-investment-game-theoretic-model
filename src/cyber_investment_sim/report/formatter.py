@@ -16,7 +16,7 @@ class ReportFormatter:
     @staticmethod
     def format_payoff_matrix(game: NormalFormGame) -> str:
         """Render a formatted 2D ASCII table of the normal-form payoff matrix."""
-        header = f"{'Firm 1 \\ Firm 2':<16} | " + " | ".join(f"{s2:<18}" for s2 in game.strategies_2)
+        header = f"{'Firm 1 / Firm 2':<16} | " + " | ".join(f"{s2:<18}" for s2 in game.strategies_2)
         sep = "-" * len(header)
         lines = [header, sep]
         for s1 in game.strategies_1:
